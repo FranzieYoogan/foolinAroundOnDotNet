@@ -1,0 +1,61 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    
+}
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+
+
+<div class="text-center">
+     <form>
+        
+        <button type="button" id="send" class="focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">CLICK</button>
+
+
+
+@functions {
+
+    public string showIt() {
+
+        string nameValue = "FRANZIEE";
+        return nameValue;
+
+    }
+
+}
+
+<script>
+
+
+
+  var data = document.getElementById('send')
+    var click = 0;
+
+     data.addEventListener("click", function() {
+        click++;
+    console.log(click);
+        if(click == 1) {
+  document.getElementById('textValue').style.visibility = "visible";
+        }
+
+
+         if(click == 2) {
+        click = 0;
+  document.getElementById('textValue').style.visibility = "hidden";
+  }
+});
+
+
+
+</script>
+
+<h1 id="textValue" style="visibility: hidden">@showIt()</h1>
+
+    </form>
+</div>
+
+
+
+
+
